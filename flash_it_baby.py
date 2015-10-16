@@ -144,9 +144,15 @@ def getRouterData(imageNr):
                     'wifiPwd': data[0][2],
                     'rootPwd': data[0][3]
                 }
+            elif len(data) == 0:
+                print('image data for "' + imageNr + '" not found!')
+                return None
             else:
                 print('imageNr not unique!')
                 return None
+    elif len(result) == 0:
+        print('.csv with image data not found!')
+        return None
 
     print('.csv file not unique!')
     return None
@@ -173,7 +179,11 @@ def main():
         return
 
     while True:
-        image = input('Image number? ')
+        image = 'exit'
+        try:
+            image = input('Image number? ')
+        except EOFError:
+            return
 
         if image == 'exit':
             return
