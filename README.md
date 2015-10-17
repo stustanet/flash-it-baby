@@ -1,21 +1,25 @@
 Flash It Baby
 =============
 
-Skript zum Flashen von (TP-Link) Router für den Verkauf in der Sprechstunde.
+Skript zum Flashen von Routern für den Verkauf in der Sprechstunde.
+
+Gesteste mit: 
+* TL-WR841N
 
 Packages
 --------
 
-* requests
-* paramiko
+* `requests`
+* `paramiko`
 
-`pip install` ist dein bester Freund!
+`pip install` ist dein bester Freund.
 
 CSV-Datei-Format
 ----------------
 
-Getrennt durch Komma ",".
-Folgende Felder:
+Getrennt durch Komma `,`
+
+Die Datei soll mindestens folgende Felder haben:
 
 * Image Nummer
 * SSID
